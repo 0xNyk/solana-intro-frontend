@@ -1,11 +1,15 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
-import styles from '../styles/AddressForm.module.css'
+
+import styles from '../styles/AddressForm.module.css';
+
 
 function AddressForm(props: { handler: (address: string) => void }) {
 
   const [values, setValues] = useState({
     address: '',
   });
+
+  
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
